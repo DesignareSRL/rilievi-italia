@@ -15,6 +15,8 @@ R={
  ('  EMAILJS_TEMPLATE_ID: "",     // EmailJS > Email Templates > Template ID','  EMAILJS_TEMPLATE_ID: "template_21zxz9g",'),
  ('    d.page=location.href;\n    btn.disabled=true;',"    d.page=location.href;\n    var e={name:d.from_name,email:d.reply_to,reply_to:d.reply_to,title:d.comune,comune:d.comune,\n      message:'Telefono: '+d.phone+'\\nEmail: '+d.reply_to+'\\nComune: '+d.comune+'\\nTipo immobile: '+d.tipo+'\\nSuperficie: '+(d.superficie||'-')+' m2\\nElaborati: '+d.elaborati+'\\n\\nNote:\\n'+(d.message||'-')+'\\n\\nInviato da: '+d.page};\n    btn.disabled=true;"),
  ('emailjs.send(C.EMAILJS_SERVICE_ID,C.EMAILJS_TEMPLATE_ID,d)','emailjs.send(C.EMAILJS_SERVICE_ID,C.EMAILJS_TEMPLATE_ID,e)'),
+ ("      location.href='mailto:info@designare.pro?subject='+encodeURIComponent('Richiesta preventivo rilievo – '+(d.comune||''))+'&body='+encodeURIComponent(body);\n      riConv(C.CONV_FORM);\n",''),
+ ('show(\'ok\',"Si è aperto il tuo programma di posta con la richiesta già compilata: premi Invia per completarla. In alternativa scrivici a info@designare.pro.");','show(\'err\',"Invio non riuscito. Riprova tra qualche minuto oppure scrivici a info@designare.pro.");'),
 ],
 "privacy.html":[(' · Tel. 389 197 2308.','.')],
 }
