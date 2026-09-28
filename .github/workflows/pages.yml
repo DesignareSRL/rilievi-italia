@@ -24,6 +24,7 @@ jobs:
           unzip -o sito-deploy.zip -d _site
           echo "rilievi-italia.it" > _site/CNAME
           touch _site/.nojekyll
+          python3 fix.py _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
